@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo App</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div class="jumbotron homepage-jumbotron">
+	    <h1 id="title">Welcome to Air-Otearoa</h1><br>
+	    <h4 id="main-cta">Book a Flight</h4>
+	    <input type="input" name="" placeholder="From">
+	    <input type="input" name="" placeholder="To airport or city">
+	    <input type="submit" name="" value="Search Flights"><br><br>
+	    <% if (!featureEnabled) { %>
+	    	<a href="/flightDeal"><button>Check out Flight Deals</button></a>
+	    <% } %>
+  	</div>
+  	<% if (featureEnabled) { %>
+	  	<div class="container">
+	  		<h2><b><%= title %></b></h2><hr>
+	  		<div class="container card-container">
+	  			<a href="#">
+		  			<div class="card">
+		  				<h2>Flights From Europe</h2>
+		  				<p>From $1,000</p>
+		  				<p class="disclaimer">Round-trip in Economy</p>
+		  			</div>
+	  			</a>
+	  			<a href="#">
+		  			<div class="card">
+		  				<h2>Flights From Australia</h2>
+		  				<p>From $500</p>
+		  				<p class="disclaimer">Round-trip in Economy</p>
+		  			</div>  			  				
+	  			</a>
+	  			<a href="/flightDeal">
+		  			<div class="card">
+		  				<h2>Flights From West Coast U.S.</h2>
+		  				<p>From $800</p>
+		  				<p class="disclaimer">Round-trip in Economy</p>
+		  			</div>
+	  			</a>
+	  		</div>
+	  	</div>
+	<% } %>
+  	<div class="container">
+  		<h2><b>Our Favorite Destinations</b></h2><hr>
+  		<table>
+  			<tr>
+  				<td width="30%;" class="destination" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<%= travelDestinations.destination1.img %>);"><%= travelDestinations.destination1.name %></td>
+  				<td width="30%;" class="destination" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<%= travelDestinations.destination2.img %>);"><%= travelDestinations.destination2.name %></td>
+  				<td width="30%;" class="destination" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<%= travelDestinations.destination3.img %>);"><%= travelDestinations.destination3.name %></td>
+  			</tr>
+  		</table>
+  	</div><br><br>
+  </body>
+</html>
