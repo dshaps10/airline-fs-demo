@@ -54,54 +54,68 @@ var userId = "789";
 router.get('/', function(req, res, next) {
 	var featureEnabled = optimizelyClient.isFeatureEnabled('flight_deals', userId);
 	var title = optimizelyClient.getFeatureVariableString('flight_deals', 'title', userId);
+	var variation = optimizelyClient.activate('destination_recommendations', userId);
 
 	// Default recommended locations
-	var travelDestinations = {
+	var northAmericanTravelDestinations = {
 		destination1: {
-			name: "Kaikoura",
-			img: "https://www.christchurchnz.com/media/7228/kaikoura_bay.jpg?center=0.65573770491803274,0.4453551912568306&mode=crop&width=1100&heightratio=1&rnd=131534981480000000"
+			name: "San Francisco",
+			img: "https://images.unsplash.com/photo-1526404423292-15db8c2334e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=25a6176d2b7c949856700b8afd9bea32&auto=format&fit=crop&w=975&q=80"
 		},
 		destination2: {
-			name: "Wellington",
-			img: "https://www.telegraph.co.uk/content/dam/Travel/leadAssets/24/43/wellington_2443262a.jpg?imwidth=450"
+			name: "Austin",
+			img: "https://images.unsplash.com/photo-1508737896714-62db8b4dbfe2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f731e11716e2cfcff879d5e9c9cd92c&auto=format&fit=crop&w=1350&q=80"
 		},
 		destination3: {
-			name: "Auckland",
-			img: "https://www.heartofthecity.co.nz/sites/default/files/styles/listing_regular_image/public/listing_images/Sunset%20image%20square.jpg?itok=51KzHHD6"
+			name: "Vancouver",
+			img: "https://images.unsplash.com/photo-1527201488222-1877fba009be?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=975a1e9c1683fbe02d0d0fbbf1f6b5d1&auto=format&fit=crop&w=1350&q=80"
 		}
 	}
 
 	// Alternative recommended locations
-	var alternativeTravelDestinations = {
+	var internationalTravelDestinations = {
 		destination1: {
-			name: "Christchurch",
-			img: "https://hotel115.co.nz/wp-content/uploads/2017/08/New-regent-street-christchurch.png"
+			name: "Sydney",
+			img: "https://images.unsplash.com/photo-1524293581917-878a6d017c71?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b7a43ba69b82c9d52d9bd09eff8a652&auto=format&fit=crop&w=1350&q=80"
 		},
 		destination2: {
-			name: "Queenstown",
-			img: "https://tul.imgix.net/content/article/things-to-do-queenstown-1.jpg?auto=format,compress&w=740&h=486&fit=crop&crop=edges"
+			name: "Hong Kong",
+			img: "https://images.unsplash.com/photo-1529583302858-7143cb9440cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94b1eb8f43be842e2149fa5d7c146bcc&auto=format&fit=crop&w=934&q=80"
 		},
 		destination3: {
-			name: "Rotorua",
-			img: "https://resources.stuff.co.nz/content/dam/images/1/n/u/2/y/o/image.related.StuffLandscapeSixteenByNine.620x349.1ntrru.png/1515704144379.jpg"
+			name: "Auckland",
+			img: "https://images.unsplash.com/photo-1531274071216-aea6e7a086c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=342f6a184021974c93bbcf5070694b62&auto=format&fit=crop&w=975&q=80"
 		}
 	}
 
 	// Will determine whether to show default or alternative recs based on output from
 	// alternativeRecs feature variable
-	if (alternativeRecs) {
-		res.render('index', { featureEnabled, title, travelDestinations: alternativeTravelDestinations });
+	if (variation === 'CONTROL') {
+		res.render('index', { featureEnabled, title, travelDestinations: northAmericanTravelDestinations });
+	} else if (variation === 'TREATMENT') {
+		res.render('index', { featureEnabled, title, travelDestinations: internationalTravelDestinations });
 	} else {
-		res.render('index', { featureEnabled, title, travelDestinations: travelDestinations });
+		res.render('index', { featureEnabled, title, travelDestinations: northAmericanTravelDestinations });
 	}
 
 });
 
-router.get('/flightDeal', function(req, res, next) {
-	optimizelyClient.track('Viewed Deals Page', userId);
+router.get('/flight-deals/north-america', function(req, res, next) {
+	optimizelyClient.track('Viewed North American Deals Page', userId);
+	res.render('NorthAmericaLandingPage');
+});
 
-	res.render('SanFranciscoLandingPage');
-})
+router.get('/flight-deals/australia', function(req, res, next) {
+	optimizelyClient.track('Viewed International Deals Page', userId);
+	res.render('AustraliaLandingPage');
+});
+
+router.get('/flight-deals/asia', function(req, res, next) {
+	optimizelyClient.track('Viewed International Deals Page', userId);
+	res.render('AsiaLandingPage');
+});
+
+
 
 // router.post('/datafileUpdates', function(req, res, next) {
 // 	console.log('received datafile update');

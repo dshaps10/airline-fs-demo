@@ -73,8 +73,22 @@ table, th, td {
 	height: 300px;
 }
 
-.flight-deals-jumbotron {
+.north-america-flight-deals-jumbotron {
 	background: url('https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/1260/540/92/secure.parksandresorts.wdpromedia.com/media/abd/refresh/north-america/san-francisco-tours/adventures-by-disney-north-america-san-francisco-long-weekend-hero-01-golden-gate-bridge.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 400px;
+}
+
+.australia-flight-deals-jumbotron {
+	background: url('http://www.sydneycafes.com.au/wp-content/uploads/2016/11/Sydney-Harbour.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 400px;
+}
+
+.asia-flight-deals-jumbotron {
+	background: url('https://media.starcruises.com//Content/Images/090010c4-5823-4ddc-96ca-b57deb4edf29_hong_kong.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 400px;
