@@ -53,8 +53,6 @@ var userId = "789";
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var featureEnabled = optimizelyClient.isFeatureEnabled('flight_deals', userId);
-	var recsEnabled = optimizelyClient.isFeatureEnabled('destination_recommendations', userId);
-	var alternativeRecs = optimizelyClient.getFeatureVariableBoolean('destination_recommendations', 'alternative_recs', userId);
 	var title = optimizelyClient.getFeatureVariableString('flight_deals', 'title', userId);
 
 	// Default recommended locations

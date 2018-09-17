@@ -82,7 +82,7 @@ table, th, td {
 
 .homepage-jumbotron {
 	text-align: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1527634632829-7f220bb9e667?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=816ac66b80c426080a0f4297ed051cef&auto=format&fit=crop&w=1350&q=80');
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c90e58e6b2f616fbd8aee82c67723c3&auto=format&fit=crop&w=1333&q=80');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
