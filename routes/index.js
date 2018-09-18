@@ -41,10 +41,10 @@ var optimizelyClient = optimizely.createInstance({ datafile: datafile });
 // var userId = "123";
 
 // variation_2 whitelisted ID
-var userId = "456";
+// var userId = "456";
 
 // variation_3 whitelisted ID
-// var userId = "789";
+var userId = "789";
 
 // console.log('Feature Enabled: ', featureEnabled);
 // console.log('Flight Deals Headline: ', title);
