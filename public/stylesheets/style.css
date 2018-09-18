@@ -74,14 +74,14 @@ table, th, td {
 }
 
 .north-america-flight-deals-jumbotron {
-	background: url('https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/1260/540/92/secure.parksandresorts.wdpromedia.com/media/abd/refresh/north-america/san-francisco-tours/adventures-by-disney-north-america-san-francisco-long-weekend-hero-01-golden-gate-bridge.jpg');
+	background: url('https://travelpride.org/wp-content/uploads/2017/10/milkovi-334541.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 400px;
 }
 
 .australia-flight-deals-jumbotron {
-	background: url('http://www.sydneycafes.com.au/wp-content/uploads/2016/11/Sydney-Harbour.jpg');
+	background: url('https://upload.wikimedia.org/wikipedia/commons/a/a8/Sydney_harbour_bridge_new_south_wales.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 400px;
@@ -96,7 +96,7 @@ table, th, td {
 
 .homepage-jumbotron {
 	text-align: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c90e58e6b2f616fbd8aee82c67723c3&auto=format&fit=crop&w=1333&q=80');
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://abcnews.go.com/images/US/CN-Golden-Gate-Bridge-MEM-170526.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
