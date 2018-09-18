@@ -41,10 +41,10 @@ var optimizelyClient = optimizely.createInstance({ datafile: datafile });
 // var userId = "123";
 
 // variation_2 whitelisted ID
-// var userId = "456";
+var userId = "456";
 
 // variation_3 whitelisted ID
-var userId = "789";
+// var userId = "789";
 
 // console.log('Feature Enabled: ', featureEnabled);
 // console.log('Flight Deals Headline: ', title);
@@ -63,8 +63,8 @@ router.get('/', function(req, res, next) {
 			img: "https://images.unsplash.com/photo-1526404423292-15db8c2334e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=25a6176d2b7c949856700b8afd9bea32&auto=format&fit=crop&w=975&q=80"
 		},
 		destination2: {
-			name: "Austin",
-			img: "https://images.unsplash.com/photo-1508737896714-62db8b4dbfe2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f731e11716e2cfcff879d5e9c9cd92c&auto=format&fit=crop&w=1350&q=80"
+			name: "Sydney",
+			img: "https://images.unsplash.com/photo-1524293581917-878a6d017c71?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b7a43ba69b82c9d52d9bd09eff8a652&auto=format&fit=crop&w=1350&q=80"
 		},
 		destination3: {
 			name: "Vancouver",
