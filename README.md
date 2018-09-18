@@ -24,4 +24,4 @@ This feature is wrapped around the flight deals module that will be displayed on
 
 Flight Deals Feature:
 
-![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/Screen%20Shot%202018-09-18%20at%2010.06.00%20AM.png?raw=true)
+![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/feature%20screenshot.png)
