@@ -115,6 +115,9 @@ router.get('/flight-deals/asia', function(req, res, next) {
 	res.render('AsiaLandingPage');
 });
 
+router.get('/checkout', function(req, res, next) {
+	res.render('CheckoutForm');
+})
 
 
 // router.post('/datafileUpdates', function(req, res, next) {
@@ -122,3 +125,26 @@ router.get('/flight-deals/asia', function(req, res, next) {
 // })
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

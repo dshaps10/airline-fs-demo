@@ -94,6 +94,15 @@ table, th, td {
 	height: 400px;
 }
 
+.checkout-jumbotron {
+	height: 200px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://s.thestreet.com/files/tsc/v2008/photos/contrib/uploads/planeinclouds.jpg');
+	background-position: center;
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
 .homepage-jumbotron {
 	text-align: center;
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://abcnews.go.com/images/US/CN-Golden-Gate-Bridge-MEM-170526.jpg');
