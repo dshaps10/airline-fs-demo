@@ -15,3 +15,14 @@ Pacific Airlines is  trying to increase its footprint in the Asia and Australia 
 The first test will be behind an Optimizely feature flag and will be testing the feature, itself, as well as the CTA at the top of the feature. A visitor's variation will determine whether or not the feature is displayed at all as well as the CTA that is rendered on the page.
 
 The second test will be a simple A/B test that splits traffic to either the default recommnedations module or the modified one that only displays international locations.
+
+## Features Used
+
+### flight_deals
+
+This feature is wrapped around the flight deals module that will be displayed on the Pacific Airlines homepage. If turned off, the module will not display and, instead, the visitor will be shown the default experience which is a simple button below the search bar on the homepage. There is one feature variable called `title` of data type `string`. This feature variable will take the place of the hardcoded CTA at the top of the flight deals module. The feature, itself, is not restricted to any specific audiences.
+
+Flight Deals Feature:
+![screenshot] [screenshot]
+
+[screenshot]: https://github.com/dshaps10/airline-fs-demo/blob/master/Screen%20Shot%202018-09-18%20at%2010.06.00%20AM.png?raw=true
