@@ -23,6 +23,5 @@ The second test will be a simple A/B test that splits traffic to either the defa
 This feature is wrapped around the flight deals module that will be displayed on the Pacific Airlines homepage. If turned off, the module will not display and, instead, the visitor will be shown the default experience which is a simple button below the search bar on the homepage. There is one feature variable called `title` of data type `string`. This feature variable will take the place of the hardcoded CTA at the top of the flight deals module. The feature, itself, is not restricted to any specific audiences.
 
 Flight Deals Feature:
-![Alt text] [screenshot]
 
-[screenshot]: https://github.com/dshaps10/airline-fs-demo/blob/master/Screen%20Shot%202018-09-18%20at%2010.06.00%20AM.png?raw=true
+![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/Screen%20Shot%202018-09-18%20at%2010.06.00%20AM.png?raw=true)
