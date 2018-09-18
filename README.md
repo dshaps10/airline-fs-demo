@@ -25,3 +25,17 @@ This feature is wrapped around the flight deals module that will be displayed on
 Flight Deals Feature:
 
 ![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/feature%20screenshot.png)
+
+## Experiments Run
+
+### flight_deals_test
+
+In this test we're testing different configurations of the `flight_deals` feature. Visitors bucketed into `variation_1` will see the default experience of the simple button linking to the flight deals page; visitors bucketed into `variation_2` will see the new flight_deals feature with the CTA text: "Our Available Flight Deals"; visitors bucketed into `variation_3` will also see the new flight_deals feature, but with the modified CTA: "Check Out These Flight Deals". The CTA text will be changed using the `title` feature variable as part of the `flight_deals` feature.
+
+Flight Deals Test Summary:
+
+![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/feature%20test%20summary.png)
+
+Flight Deals Test Traffic Allocation:
+
+![Alt text](https://github.com/dshaps10/airline-fs-demo/blob/master/feature%20test%20traffic%20allocation.png)
