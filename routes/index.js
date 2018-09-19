@@ -117,6 +117,11 @@ router.get('/flight-deals/asia', function(req, res, next) {
 
 router.get('/checkout', function(req, res, next) {
 	res.render('CheckoutForm');
+});
+
+router.get('/confirmation', function(req, res, next) {
+	optimizelyClient.track('Booked Flight', userId);
+	res.render('Confirmation');
 })
 
 
