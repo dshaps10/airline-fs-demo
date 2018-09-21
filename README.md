@@ -11,6 +11,27 @@ This demo is intended as a sandbox for partners to use when getting ramped up on
 3. Execute the `nodemon` command in the terminal to start the node server (no need to point it towards a specific entry point)
 4. Go to the browser and navigate to `localhost:3000`
 
+## Click Path
+
+There are a total of two experiments running:
+
+1. flight_deals_test, a feature test that will hide, show, and modify the flight deals feature depending on a visitor's variation assignment
+2. destination_recommendations, a regular A/B test that will modify which recommended destinations are displayed to the visitor.
+
+Both of these test are displayed on the homepage with click tracking happening at various points in the funnel. Below are instructions on how to navigate through each test.
+
+### flight_deals_test
+
+#### Rendering the Experiment:
+
+1. Open up `index.js` in the text editor of your choice
+2. Navigate to line 41 and ensure the userId = '123' is not commented out (all subsequent userIds should be commented out)
+3. Go to the demo site homepage in the browser and refresh the page. You Should see a basic button below the search bar in the hero image. This is the default experience
+4. Open up `index.js` again and comment out userId = '123', instead uncommenting userId = '456' on line 44
+5. Navigate back to the demo site homepage and refresh the page. You should now see the new flight deals feature being displayed with the CTA 'Our Available Flights'
+6. Open up `index.js` again and comment out userId = '456', this time uncommenting userId = '789' on line 47
+7. Navigate once more to the demo site homepage and refresh the page. This time you should see the same flight deals feature, but with the alternate CTA, 'Check Out These Flight Deals'
+
 ## Hypothetical Scenario
 
 Pacific Airlines is  trying to increase its footprint in the Asia and Australia markets since the majority of their visitors are booking travel within North America. In order to drive more traffic to their international flights, they are experimenting with two different methods:
