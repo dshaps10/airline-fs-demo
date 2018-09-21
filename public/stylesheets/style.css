@@ -105,7 +105,7 @@ table, th, td {
 
 .homepage-jumbotron {
 	text-align: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://abcnews.go.com/images/US/CN-Golden-Gate-Bridge-MEM-170526.jpg');
+	background: url('https://res.cloudinary.com/dy8i0qezub/image/fetch/f_auto/https://images.ctfassets.net/zw48pl1isxmc/3PSpuhy2h2aSySIuS44wuM/17c91c4d10f0f4ff30bc205683c5c41e/hero-bg-travel.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

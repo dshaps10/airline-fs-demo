@@ -4,6 +4,13 @@
 
 This demo is intended as a sandbox for partners to use when getting ramped up on Full Stack. Because they will not have access to the Optimizely account that this is linked to I will provide screen shots and gifs to help users of this demo app understand what's happening behind the scenes.
 
+## Steps for using the demo site
+
+1. Clone or fork a copy of this repository: https://github.com/dshaps10/airline-fs-demo.git to your local machine
+2. Make sure you have the correct Node dependencies by running `npm install`
+3. Execute the `nodemon` command in the terminal to start the node server (no need to point it towards a specific entry point)
+4. Go to the browser and navigate to `localhost:3000`
+
 ## Hypothetical Scenario
 
 Pacific Airlines is  trying to increase its footprint in the Asia and Australia markets since the majority of their visitors are booking travel within North America. In order to drive more traffic to their international flights, they are experimenting with two different methods:
