@@ -19,13 +19,9 @@
 	    <input type="input" name="" placeholder="From">
 	    <input type="input" name="" placeholder="To airport or city">
 	    <input type="submit" name="" value="Search Flights"><br><br>
-	    <% if (!featureEnabled) { %>
-	    	<a href="/flightDeal"><button>Check out Flight Deals</button></a>
-	    <% } %>
   	</div>
-  	<% if (featureEnabled) { %>
 	  	<div class="container">
-	  		<h2><b><%= title %></b></h2><hr>
+	  		<h2><b>Flight Deals</b></h2><hr>
 	  		<div class="container card-container">
 	  			<a href="/flight-deals/asia">
 		  			<div class="card">
@@ -50,7 +46,6 @@
 	  			</a>
 	  		</div>
 	  	</div>
-	<% } %>
   	<div class="container">
   		<h2><b>Our Favorite Destinations</b></h2><hr>
   		<table>
